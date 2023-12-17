@@ -4,19 +4,6 @@
     <br>
 </p>
 
-
----
-license: other
-datasets:
-- vietgpt/wikipedia_vi
-- wikipedia
-- pg19
-- mc4
-language:
-- vi
-- en
----
-
 We employed [SentencePiece](https://github.com/google/sentencepiece) to retrain a Vietnamese tokenizer with a vocabulary size of 20K. No Vietnamese word segmentation was used. We then merged this vocabulary with the original one of Llama2, removing duplicate tokens.
 The new tokenizer significantly improves when encoding Vietnamese text, reducing the number of tokens by 50% compared to ChatGPT and approximately 70% compared to the original Llama2.
 
