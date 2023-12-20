@@ -63,7 +63,7 @@ Please note that **this model requires further supervised fine-tuning (SFT)** to
 
 Usage and other considerations: We refer to the [Llama 2](https://github.com/facebookresearch/llama)
 
-Training loss:
+Training loss (the red line indicates the learning curve of [vietnamese-llama2-4b-40GB](https://huggingface.co/bkai-foundation-models/vietnamese-llama2-7b-40GB)):
 <img src="plot.png" alt="Training Loss Curve"/>
 
 
