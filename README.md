@@ -2,6 +2,7 @@
     <br>
     <img src="banner.png" width="800"/>
     <br>
+    Image created by DALLE-3
 </p>
 
 ### Tokenizer
