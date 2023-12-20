@@ -4,20 +4,26 @@
     <br>
 </p>
 
-We employed [SentencePiece](https://github.com/google/sentencepiece) to retrain a Vietnamese tokenizer with a vocabulary size of 20K. No Vietnamese word segmentation was used. We then merged this vocabulary with the original one of Llama2, removing duplicate tokens.
-The new tokenizer significantly improves when encoding Vietnamese text, reducing the number of tokens by 50% compared to ChatGPT and approximately 70% compared to the original Llama2.
+We enhance our previous tokenizer in [vietnamese-llama2-4b-40GB](https://huggingface.co/bkai-foundation-models/vietnamese-llama2-7b-40GB) by training [SentencePiece](https://github.com/google/sentencepiece) a more extensive collection of clean Vietnamese documents spanning diverse domains such as news, book, stock, finance and laws. 
+In contrast to the previous version, we follow the original LLaMA-2 paper to split all numbers into individual digits. Again, the updated tokenizer markedly enhances the encoding of Vietnamese text, cutting down the number of tokens by 50% compared to ChatGPT and approximately 70% compared to the original Llama2.
 
-We conducted a single-epoch continual pretraining, also known as incremental pretraining, using the Llama2-chat 7B model on a mixed dataset totaling 40.5 GB, comprised of:
-- 19 GB [NewsCorpus](https://github.com/binhvq/news-corpus)
-- 1.1 GB Vietnamese Wikipedia
-- 1.6 GB [Vietnamese books](https://www.kaggle.com/datasets/iambestfeeder/10000-vietnamese-books)
-- 4.5 GB Vietnamese legal documents (crawled from thuvienphapluat and processed by ourselves)
-- 2.1 GB Vietnamese legal text (from [C4-vi](https://huggingface.co/datasets/c4))
-- 1.1 GB English Books (sub-sampled from [pg19](https://huggingface.co/datasets/pg19))
-- 1.1 GB English Wikipedia (sub-sampled from 20220301.en wikipedia)
-- 10 GB English Text (sub-sampled from [C4-en](https://huggingface.co/datasets/c4))
+Here are our data sources:
+- 53 GB  NewsCorpus (clean + dedup BinhVq's [NewsCorpus](https://github.com/binhvq/news-corpus) combined with our self-crawled data up to October 2023)
+- 1.3 GB Vietnamese Wikipedia (updated to October 2023)
+- 8.5 GB [Vietnamese books](https://www.kaggle.com/datasets/iambestfeeder/10000-vietnamese-books)
+- 4.8 GB Vietnamese legal documents (clean and dedup)
+- 1.6 GB stock news (clean and dedup)
+- 43 GB Vietnamese text (subsampled from Culturax-vi)
+- 2.3 GB English Books (sub-sampled from [pg19](https://huggingface.co/datasets/pg19))
+- 2.2 GB English Wikipedia
 
-We trained the model on a DGX A100 system, utilizing four GPU A100 in 10 days (about 1000 GPU hours). 
+- 16 GB English text (subsampled from Culturax-en)
+
+We then merge all data sources and perform the last deduplication, resulting in a final pretraining dataset of 124 GB, including 104 GB of Vietnamese text and 20 GB of English text.
+
+We conduct a single-epoch continual pretraining using the Llama2-7B model.
+
+We trained the model on a DGX A100 system, utilizing four GPU A100 in 40 days (about 4000 GPU hours). 
 
 Hyperparameters are set as follows:
 - Training Regime: BFloat16 mixed precision
@@ -52,8 +58,6 @@ Hyperparameters are set as follows:
   }
   
   ```
-
-We also provide the [LoRA part](https://huggingface.co/bkai-foundation-models/vietnamese-llama2-7b-40GB/tree/main/pt_lora_model) so that you can integrate it with the original Llama2-chat-7b by yourself.
 
 Please note that **this model requires further supervised fine-tuning (SFT)** to be used in practice!
 
