@@ -64,7 +64,8 @@ Please note that **this model requires further supervised fine-tuning (SFT)** to
 Usage and other considerations: We refer to the [Llama 2](https://github.com/facebookresearch/llama)
 
 Training loss:
-<img src="figure/training_loss.png" alt="Training Loss Curve"/>
+<img src="plot.png" alt="Training Loss Curve"/>
+
 
 **Disclaimer**
 
