@@ -9,7 +9,7 @@ We enhance our previous tokenizer in [vietnamese-llama2-4b-40GB](https://hugging
 
 ### Pretraining data
 Here are our data sources:
-- 53 GB  NewsCorpus (clean + dedup BinhVq's [NewsCorpus](https://github.com/binhvq/news-corpus) combined with our self-crawled data up to October 2023). Thanks [iambestfeed](https://huggingface.co/iambestfeed) for his great work in crawling news data.
+- 53 GB  NewsCorpus (clean + dedup [binhvq's NewsCorpus](https://github.com/binhvq/news-corpus) combined with our self-crawled data up to October 2023). Thanks [iambestfeed](https://huggingface.co/iambestfeed) for his great work in crawling news data.
 - 1.3 GB Vietnamese Wikipedia (updated to October 2023)
 - 8.5 GB [Vietnamese books](https://www.kaggle.com/datasets/iambestfeeder/10000-vietnamese-books)
 - 4.8 GB Vietnamese legal documents (clean and dedup)
