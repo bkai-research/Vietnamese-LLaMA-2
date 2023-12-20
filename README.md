@@ -5,8 +5,7 @@
 </p>
 
 ### Tokenizer
-We enhance our previous tokenizer in [vietnamese-llama2-4b-40GB](https://huggingface.co/bkai-foundation-models/vietnamese-llama2-7b-40GB) by training [SentencePiece](https://github.com/google/sentencepiece) a more extensive collection of clean Vietnamese documents spanning diverse domains such as news, book, stock, finance and laws. 
-In contrast to the previous version, we follow the original LLaMA-2 paper to split all numbers into individual digits. Again, the updated tokenizer markedly enhances the encoding of Vietnamese text, cutting down the number of tokens by 50% compared to ChatGPT and approximately 70% compared to the original Llama2.
+We enhance our previous tokenizer in [vietnamese-llama2-4b-40GB](https://huggingface.co/bkai-foundation-models/vietnamese-llama2-7b-40GB) by training [SentencePiece](https://github.com/google/sentencepiece) on a more extensive collection of clean Vietnamese documents spanning diverse domains such as news, books, stock, finance, and laws. In contrast to the previous version, we follow the original LLaMA-2 paper to split all numbers into individual digits. Again, the updated tokenizer markedly enhances the encoding of Vietnamese text, cutting down the number of tokens by 50% compared to ChatGPT and approximately 70% compared to the original Llama2.
 
 ### Pretraining data
 Here are our data sources:
