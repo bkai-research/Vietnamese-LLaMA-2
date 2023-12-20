@@ -67,8 +67,8 @@ Below are our full models on HuggingFace:
 
 | Model Name            |       Type        |  Size   |                        Download Link                         |
 | :-------------------- | :---------------: | :-----: | :----------------------------------------------------------: | 
-| Vietnamese-LLaMA-2-7B-40GB | Base model | 12.9 GB | [🤗HF]([https://huggingface.co/hfl/chinese-llama-2-7b](https://huggingface.co/bkai-foundation-models/vietnamese-llama2-7b-40GB)) | 
-| Vietnamese-LLaMA-2-7B-120GB | Base model | 12.9 GB | [🤗HF]([https://huggingface.co/hfl/chinese-llama-2-7b](https://huggingface.co/bkai-foundation-models/vietnamese-llama2-7b-120GB)) | 
+| Vietnamese-LLaMA-2-7B-40GB | Base model | 12.9 GB | [[🤗HF]](https://huggingface.co/bkai-foundation-models/vietnamese-llama2-7b-40GB) | 
+| Vietnamese-LLaMA-2-7B-120GB | Base model | 12.9 GB | [[🤗HF]](https://huggingface.co/bkai-foundation-models/vietnamese-llama2-7b-120GB)| 
 
 **Training loss** (the red line indicates the learning curve of [vietnamese-llama2-4b-40GB](https://huggingface.co/bkai-foundation-models/vietnamese-llama2-7b-40GB)):
 <img src="plot.png" alt="Training Loss Curve"/>
