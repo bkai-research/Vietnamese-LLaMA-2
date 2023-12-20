@@ -8,7 +8,7 @@ We enhance our previous tokenizer in [vietnamese-llama2-4b-40GB](https://hugging
 In contrast to the previous version, we follow the original LLaMA-2 paper to split all numbers into individual digits. Again, the updated tokenizer markedly enhances the encoding of Vietnamese text, cutting down the number of tokens by 50% compared to ChatGPT and approximately 70% compared to the original Llama2.
 
 Here are our data sources:
-- 53 GB  NewsCorpus (clean + dedup BinhVq's [NewsCorpus](https://github.com/binhvq/news-corpus) combined with our self-crawled data up to October 2023)
+- 53 GB  NewsCorpus (clean + dedup BinhVq's [NewsCorpus](https://github.com/binhvq/news-corpus) combined with our self-crawled data up to October 2023). Thanks iambestfeed[https://huggingface.co/iambestfeed] for his great work in crawling news data.
 - 1.3 GB Vietnamese Wikipedia (updated to October 2023)
 - 8.5 GB [Vietnamese books](https://www.kaggle.com/datasets/iambestfeeder/10000-vietnamese-books)
 - 4.8 GB Vietnamese legal documents (clean and dedup)
@@ -74,4 +74,4 @@ For those employing the models from this project for commercial purposes, develo
 
 **Acknowledgments**
 
-We extend our gratitude to PHPC - Phenikaa University and NVIDIA for their generous provision of computing resources for model training. Our appreciation also goes out to binhvq and the other authors for their diligent efforts in collecting and preparing the Vietnamese text corpus.
+We extend our gratitude to PHPC - Phenikaa University and NVIDIA for their generous provision of computing resources for model training. Our appreciation also goes out to [binhvq](https://github.com/binhvq/news-corpus), [iambestfeed](https://huggingface.co/iambestfeed) and the other authors for their diligent efforts in collecting and preparing the Vietnamese text corpus.
