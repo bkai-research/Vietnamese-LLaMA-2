@@ -8,7 +8,7 @@ We enhance our previous tokenizer in [vietnamese-llama2-4b-40GB](https://hugging
 In contrast to the previous version, we follow the original LLaMA-2 paper to split all numbers into individual digits. Again, the updated tokenizer markedly enhances the encoding of Vietnamese text, cutting down the number of tokens by 50% compared to ChatGPT and approximately 70% compared to the original Llama2.
 
 Here are our data sources:
-- 53 GB  NewsCorpus (clean + dedup BinhVq's [NewsCorpus](https://github.com/binhvq/news-corpus) combined with our self-crawled data up to October 2023). Thanks iambestfeed[https://huggingface.co/iambestfeed] for his great work in crawling news data.
+- 53 GB  NewsCorpus (clean + dedup BinhVq's [NewsCorpus](https://github.com/binhvq/news-corpus) combined with our self-crawled data up to October 2023). Thanks [iambestfeed][https://huggingface.co/iambestfeed] for his great work in crawling news data.
 - 1.3 GB Vietnamese Wikipedia (updated to October 2023)
 - 8.5 GB [Vietnamese books](https://www.kaggle.com/datasets/iambestfeeder/10000-vietnamese-books)
 - 4.8 GB Vietnamese legal documents (clean and dedup)
@@ -63,8 +63,16 @@ Please note that **this model requires further supervised fine-tuning (SFT)** to
 
 Usage and other considerations: We refer to the [Llama 2](https://github.com/facebookresearch/llama)
 
+Below are our full models on HuggingFace:
+
+| Model Name            |       Type        |  Size   |                        Download Link                         |
+| :-------------------- | :---------------: | :-----: | :----------------------------------------------------------: | 
+| Vietnamese-LLaMA-2-7B-40GB | Base model | 12.9 GB | [[🤗HF]]([https://huggingface.co/hfl/chinese-llama-2-7b](https://huggingface.co/bkai-foundation-models/vietnamese-llama2-7b-40GB)) | 
+| Vietnamese-LLaMA-2-7B-120GB | Base model | 12.9 GB | [[🤗HF]]([https://huggingface.co/hfl/chinese-llama-2-7b](https://huggingface.co/bkai-foundation-models/vietnamese-llama2-7b-120GB)) | 
+
 Training loss (the red line indicates the learning curve of [vietnamese-llama2-4b-40GB](https://huggingface.co/bkai-foundation-models/vietnamese-llama2-7b-40GB)):
 <img src="plot.png" alt="Training Loss Curve"/>
+
 
 
 **Disclaimer**
