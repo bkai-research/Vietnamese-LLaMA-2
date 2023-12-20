@@ -14,11 +14,10 @@ Here are our data sources:
 - 8.5 GB [Vietnamese books](https://www.kaggle.com/datasets/iambestfeeder/10000-vietnamese-books)
 - 4.8 GB Vietnamese legal documents (clean and dedup)
 - 1.6 GB stock news (clean and dedup)
-- 43 GB Vietnamese text (subsampled from Culturax-vi)
+- 43 GB Vietnamese text (subsampled from [Culturax-vi](https://huggingface.co/papers/2309.09400))
 - 2.3 GB English Books (sub-sampled from [pg19](https://huggingface.co/datasets/pg19))
 - 2.2 GB English Wikipedia
-
-- 16 GB English text (subsampled from Culturax-en)
+- 16 GB English text (subsampled from [Culturax-en](https://huggingface.co/papers/2309.09400))
 
 We then merge all data sources and perform the last deduplication, resulting in a final pretraining dataset of 124 GB, including 104 GB of Vietnamese text and 20 GB of English text.
 
